@@ -47,7 +47,7 @@ database.ref().on("child_added", function(childSnapshot) {
     var currentTime = moment();
     console.log(moment(currentTime).format("HHmm"));
 
-    var timeDiff = moment().diff(moment(firstTrain), "minutes");
+    var timeDiff = currentTime.diff(moment(firstTrain), "minutes");
     var timeLeft = timeDiff % frequency;
     var minsAway = frequency - timeLeft;
 
@@ -55,9 +55,11 @@ database.ref().on("child_added", function(childSnapshot) {
     var nextArr = moment(nextTrain).format("hh:mm a");
 
 
-    var newRow = $("<tr><td>" + trainName + "<td>" + destination + "<td>" + frequency + "<td>" + nextArr + "<td>" + minsAway);
+    var newRow = $("<tr><td>" + trainName + "</td><td>" + destination + "</td><td>" + frequency + "</td><td>" + nextArr + "</td><td>" + minsAway + "</td>");
 
     $("tbody").append(newRow);
+
+    console.log(minsAway);
 
 });
 
