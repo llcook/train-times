@@ -41,16 +41,21 @@ database.ref().on("child_added", function(childSnapshot) {
 
     trainName = childSnapshot.val().trainName;
     destination = childSnapshot.val().destination;
-    firstTrain = childSnapshot.val().firstTrain;
+    firstTrain = moment((childSnapshot.val().firstTrain), "HHmm").subtract(1, "days");
     frequency = childSnapshot.val().frequency;
+    
+    var currentTime = moment();
+    console.log(moment(currentTime).format("HHmm"));
 
-    // console.log(trainName + destination + firstTrain + frequency);
+    var timeDiff = moment().diff(moment(firstTrain), "minutes");
+    var timeLeft = timeDiff % frequency;
+    var minsAway = frequency - timeLeft;
 
-    // CALCULATE THE NEXT ARRIVAL
+    var nextTrain = moment().add(minsAway, "minutes");
+    var nextArr = moment(nextTrain).format("hh:mm a");
 
-    // CALCULATE MINUTES AWAY
 
-    var newRow = $("<tr><td>" + trainName + "<td>" + destination + "<td>" + frequency + "<td>VAR NEXTARR</td><td>VAR MINSAWAY</td>");
+    var newRow = $("<tr><td>" + trainName + "<td>" + destination + "<td>" + frequency + "<td>" + nextArr + "<td>" + minsAway);
 
     $("tbody").append(newRow);
 
