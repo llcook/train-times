@@ -1,0 +1,42 @@
+header,
+section {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+form {
+    margin-top: 20px;
+}
+
+input {
+    margin: 10px 5px;
+}
+
+table {
+    width: 100%;
+}
+
+h1 {
+    font-size: 64px;
+}
+
+h2 {
+    font-size: 32px;
+    width: 100%;
+}
+
+#tableCat {
+    margin-top: 20px;
+}
+
+#tableHed {
+    border-spacing: 30px;
+    padding: 0;
+}
+
+td {
+    /* border-spacing: 60px; */
+    padding: 20px 40px 20px 0;
+}

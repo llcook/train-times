@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <title>Rainbow Road</title>
+
+    <meta charset="UTF-8" />
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/locale/af.js"></script>
+
+
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Rainbow Road</h1>
+    </header>
+
+    <section>
+        <table id="#trainSched">
+            <tr id="tableHed">
+                <h2>Train Schedule</h2>
+            </tr>
+            <tr id="tableCat">
+                <td>Train name</td>
+                <td>Destination</td>
+                <td>Frequency (min)</td>
+                <td>Next arrival</td>
+                <td>Minutes away</td>
+        </table>
+    </section>
+
+    <section>
+        <h2>Add train</h2>
+        <form>
+            Train name:<br>
+            <input type="text" name="name" placeholder="Bowser Express" id="trainName">
+            <br>
+
+            Destination<br>
+            <input type="text" name="destination" placeholder="Koopa Troopa Beach" id="destination"><br>
+            
+            First train time (HH:mm - military time):<br>
+            <input type="time" name="time" placeholder="19:30" id="firstTrain"><br>
+            
+            Frequency (minutes):<br>
+            <input type="number" name="frequency" placeholder="5" id="frequency"><br>
+            <input type="submit" id="submit">
+        </form>
+    </section>
+
+    <script src="javascript/app.js"></script>
+
+</body>
+
+</html>
