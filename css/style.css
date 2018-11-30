@@ -1,42 +1,99 @@
-header,
-section {
-    margin-top: 20px;
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+body {
+
+    /* BG IMAGE BY ALBERT ALBALADEJO */
+    /* https://dribbble.com/shots/2476502-Rainbow-Road */
+
+    background-image: url("https://cdn.dribbble.com/users/1047787/screenshots/2476502/rainbow-road-2.gif");
+
+    /* ///////////////////////////// */
+    
+    background-size: 100%;
+    color: white;
+    font-family: 'Aldrich', sans-serif;
+}
+
+header {
+    color: white;
+    margin-bottom: 30px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 20px;
     width: 70%;
 }
 
-form {
-    margin-top: 20px;
-}
-
-input {
-    margin: 10px 5px;
-}
-
-table {
-    width: 100%;
+section {
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    width: 70%;
 }
 
 h1 {
+    font-family: 'Righteous', cursive;
     font-size: 64px;
 }
 
 h2 {
-    font-size: 32px;
+    background-color:mediumseagreen;
+    border-radius: 25px;
+    color: white;
+    font-size: 16px;
+    margin-right: auto;
+    padding: 10px;
+    text-align: center;
+    width: 140px;
+}
+
+table td {
+    padding: 10px 40px;
     width: 100%;
 }
 
-#tableCat {
-    margin-top: 20px;
+tr:nth-child(even) {
+    background-color: rgba(197, 172, 214, 0.8);
 }
 
 #tableHed {
-    border-spacing: 30px;
-    padding: 0;
+    background-color: 
+    color: black;
+    font-size: 10px;
 }
 
-td {
-    /* border-spacing: 60px; */
-    padding: 20px 40px 20px 0;
+
+table,
+#inputForm {
+    background-color: rgb(106, 40, 150, 0.8);
+    margin-top: 10px;
+}
+
+#inputForm {
+    padding: 20px;
+}
+
+input {
+    font-size: 14px;
+    margin: 10px 5px;
+    width: 40%;
+}
+
+#firstTrain {
+    width: auto;
+}
+
+#frequency {
+    width: 30px;
+}
+
+#submit {
+    background-color: gold;
+    font-family: 'Aldrich', sans-serif;
+    padding: 5px;
+    width: 80px;
 }

@@ -7,6 +7,7 @@
 
     <meta charset="UTF-8" />
 
+    <link href="https://fonts.googleapis.com/css?family=Aldrich|Righteous" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
 
@@ -25,23 +26,22 @@
         <h1>Rainbow Road</h1>
     </header>
 
-    <section>
-        <table id="#trainSched">
-            <tr id="tableHed">
-                <h2>Train Schedule</h2>
-            </tr>
+    <section id="#trainSchedule">
+
+        <table>
+            <tr><h2>SCHEDULE</h2></tr>
             <tr id="tableCat">
-                <td>Train name</td>
-                <td>Destination</td>
-                <td>Frequency (min)</td>
-                <td>Next arrival</td>
-                <td>Minutes away</td>
+                <td id="tableHed" class="topLeftCorner">TRAIN NAME</td>
+                <td id="tableHed">DESTINATION</td>
+                <td id="tableHed">FREQUENCY (MINUTES)</td>
+                <td id="tableHed">NEXT ARRIVAL</td>
+                <td id="tableHed" class="topRightCorner">MINUTES AWAY</td>
         </table>
     </section>
 
-    <section>
-        <h2>Add train</h2>
-        <form>
+    <section id="trainForm">
+        <h2>ADD TRAIN</h2>
+        <form id="inputForm">
             Train name:<br>
             <input type="text" name="name" placeholder="Bowser Express" id="trainName">
             <br>

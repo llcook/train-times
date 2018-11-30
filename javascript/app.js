@@ -23,6 +23,11 @@ $("#submit").on("click", function (event) {
     var firstTrain = $("#firstTrain").val().trim();
     var frequency = $("#frequency").val().trim();
 
+    $("#trainName").val("");
+    $("#destination").val("");
+    $("#firstTrain").val("");
+    $("#frequency").val("");
+
     // PUSH VALUES TO DATABASE
     database.ref().push({
         trainName: trainName,
